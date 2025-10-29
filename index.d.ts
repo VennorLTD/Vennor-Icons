@@ -1,3 +1,41 @@
+import { ComponentType } from 'react';
+import { SvgProps } from 'react-native-svg';
+
+export interface VennorIconsProps extends Omit<SvgProps, 'width' | 'height'> {
+  name: IconName;
+  size?: number;
+  color?: string;
+}
+
+export type IconName =
+  | 'calender-medium-outline'
+  | 'calender-medium-solid'
+  | 'clock-medium-outline'
+  | 'giftbox'
+  | 'house-medium-outline'
+  | 'house-medium-solid'
+  | 'inbox-medium-outline'
+  | 'inbox-medium-solid'
+  | 'key-medium-outline'
+  | 'lock-medium-solid'
+  | 'people-medium-outline'
+  | 'people-medium-solid'
+  | 'person-medium-outline'
+  | 'person-medium-solid'
+  | 'person-minus-medium-outline'
+  | 'person-plus-medium-outline'
+  | 'person-star-medium-outline'
+  | 'qrcode-medium-outline'
+  | 'search-medium-outline'
+  | 'search-medium-solid'
+  | 'settings-medium-outline'
+  | 'wallet-medium-outline';
+
+// Main component export
+declare const VennorIcons: ComponentType<VennorIconsProps>;
+export default VennorIcons;
+
+// Individual icon exports for backward compatibility
 export interface IconModule {
   default: any;
 }
@@ -25,7 +63,7 @@ export const SearchMediumSolid: IconModule;
 export const SettingsMediumOutline: IconModule;
 export const WalletMediumOutline: IconModule;
 
-declare const icons: {
+export const allIcons: {
   CalenderMediumOutline: IconModule;
   CalenderMediumSolid: IconModule;
   ClockMediumOutline: IconModule;
@@ -49,5 +87,3 @@ declare const icons: {
   SettingsMediumOutline: IconModule;
   WalletMediumOutline: IconModule;
 };
-
-export default icons;

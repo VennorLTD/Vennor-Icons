@@ -1,3 +1,6 @@
+import VennorIcons from './VennorIcons';
+
+// Individual icon exports for backward compatibility
 const icons = {
   CalenderMediumOutline: require('./calender-medium-outline.svg'),
   CalenderMediumSolid: require('./calender-medium-solid.svg'),
@@ -23,8 +26,32 @@ const icons = {
   WalletMediumOutline: require('./wallet-medium-outline.svg'),
 };
 
-module.exports = icons;
+// Export the main component as default
+export default VennorIcons;
 
-Object.keys(icons).forEach(key => {
-  module.exports[key] = icons[key];
-});
+// Named exports for backward compatibility
+export const CalenderMediumOutline = icons.CalenderMediumOutline;
+export const CalenderMediumSolid = icons.CalenderMediumSolid;
+export const ClockMediumOutline = icons.ClockMediumOutline;
+export const Giftbox = icons.Giftbox;
+export const HouseMediumOutline = icons.HouseMediumOutline;
+export const HouseMediumSolid = icons.HouseMediumSolid;
+export const InboxMediumOutline = icons.InboxMediumOutline;
+export const InboxMediumSolid = icons.InboxMediumSolid;
+export const KeyMediumOutline = icons.KeyMediumOutline;
+export const LockMediumSolid = icons.LockMediumSolid;
+export const PeopleMediumOutline = icons.PeopleMediumOutline;
+export const PeopleMediumSolid = icons.PeopleMediumSolid;
+export const PersonMediumOutline = icons.PersonMediumOutline;
+export const PersonMediumSolid = icons.PersonMediumSolid;
+export const PersonMinusMediumOutline = icons.PersonMinusMediumOutline;
+export const PersonPlusMediumOutline = icons.PersonPlusMediumOutline;
+export const PersonStarMediumOutline = icons.PersonStarMediumOutline;
+export const QrcodeMediumOutline = icons.QrcodeMediumOutline;
+export const SearchMediumOutline = icons.SearchMediumOutline;
+export const SearchMediumSolid = icons.SearchMediumSolid;
+export const SettingsMediumOutline = icons.SettingsMediumOutline;
+export const WalletMediumOutline = icons.WalletMediumOutline;
+
+// Export all icons object for convenience
+export const allIcons = icons;

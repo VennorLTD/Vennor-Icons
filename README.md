@@ -4,7 +4,7 @@
   <p>A beautiful, open-source collection of SVG icons for React Native and Expo applications</p>
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-  [![npm version](https://img.shields.io/npm/v/vennor-icons.svg)](https://www.npmjs.com/package/vennor-icons)
+  [![npm version](https://img.shields.io/npm/v/vennor-icons.svg)](https://www.npmjs.com/package/@vennor-technologies/vennor-icons)
 </div>
 
 ---
@@ -20,15 +20,23 @@
 
 ## Installation
 
+### For Expo Projects (Recommended)
+
+```bash
+npx expo install @vennor-technologies/vennor-icons react-native-svg
+```
+
+### For React Native Projects
+
 ```bash
 # npm
-npm install vennor-icons
+npm install @vennor-technologies/vennor-icons react-native-svg
 
 # yarn
-yarn add vennor-icons
+yarn add @vennor-technologies/vennor-icons react-native-svg
 
 # pnpm
-pnpm add vennor-icons
+pnpm add @vennor-technologies/vennor-icons react-native-svg
 ```
 
 ### Peer Dependencies
@@ -36,27 +44,71 @@ pnpm add vennor-icons
 This package requires the following peer dependencies:
 - `react` >= 16.8.0
 - `react-native` >= 0.59.0
-
-### Setup for React Native
-
-To use SVG icons in React Native, you'll need to install `react-native-svg`:
-
-```bash
-npm install react-native-svg
-```
-
-For Expo projects:
-
-```bash
-npx expo install react-native-svg
-```
+- `react-native-svg` >= 12.0.0
 
 ## Usage
 
-### Basic Usage
+### Basic Usage (Recommended)
+
+The simplest way to use Vennor Icons is with the component syntax, similar to Ionicons:
 
 ```javascript
-import { HouseMediumOutline, SearchMediumSolid } from 'vennor-icons';
+import VennorIcons from '@vennor-technologies/vennor-icons';
+
+function MyComponent() {
+  return (
+    <View>
+      <VennorIcons name="house-medium-outline" size={24} color="#000000" />
+      <VennorIcons name="search-medium-solid" size={24} color="#FF5733" />
+    </View>
+  );
+}
+```
+
+### Component Props
+
+The `VennorIcons` component accepts the following props:
+
+- `name` (required): The icon name (see Available Icons below)
+- `size` (optional): Icon size in pixels (default: 24)
+- `color` (optional): Icon color (default: "#000000")
+- Additional props from `react-native-svg`'s `SvgProps` are also supported
+
+```javascript
+import VennorIcons from '@vennor-technologies/vennor-icons';
+
+function ProfileIcon() {
+  return (
+    <VennorIcons
+      name="person-medium-outline"
+      size={32}
+      color="#4A90E2"
+      style={{ margin: 10 }}
+    />
+  );
+}
+```
+
+### TypeScript Support
+
+Full TypeScript definitions with autocomplete for icon names:
+
+```typescript
+import VennorIcons, { IconName, VennorIconsProps } from '@vennor-technologies/vennor-icons';
+
+function MyComponent() {
+  const iconName: IconName = "house-medium-outline";
+
+  return <VennorIcons name={iconName} size={24} color="#000" />;
+}
+```
+
+### Advanced Usage (Legacy)
+
+You can also import individual icon SVG strings directly:
+
+```javascript
+import { HouseMediumOutline, SearchMediumSolid } from '@vennor-technologies/vennor-icons';
 import { SvgXml } from 'react-native-svg';
 
 function MyComponent() {
@@ -69,118 +121,116 @@ function MyComponent() {
 }
 ```
 
-### With react-native-svg Components
-
-```javascript
-import { PersonMediumOutline } from 'vennor-icons';
-import { SvgXml } from 'react-native-svg';
-
-function ProfileIcon({ size = 32, color = '#000' }) {
-  return (
-    <SvgXml
-      xml={PersonMediumOutline}
-      width={size}
-      height={size}
-      fill={color}
-    />
-  );
-}
-```
-
 ### Import All Icons
 
 ```javascript
-import icons from 'vennor-icons';
+import { allIcons } from '@vennor-technologies/vennor-icons';
 
-// Access any icon
-const homeIcon = icons.HouseMediumOutline;
-const searchIcon = icons.SearchMediumSolid;
-```
-
-### TypeScript Support
-
-Full TypeScript definitions are included:
-
-```typescript
-import { IconModule, HouseMediumOutline } from 'vennor-icons';
-
-const icon: IconModule = HouseMediumOutline;
+// Access any icon SVG string
+const homeIcon = allIcons.HouseMediumOutline;
+const searchIcon = allIcons.SearchMediumSolid;
 ```
 
 ## Available Icons
 
+All icons are available in the `name` prop using kebab-case format:
+
 ### Navigation & UI
-| Icon | Name | Variants |
-|------|------|----------|
-| 🏠 | House | `HouseMediumOutline`, `HouseMediumSolid` |
-| 🔍 | Search | `SearchMediumOutline`, `SearchMediumSolid` |
-| ⚙️ | Settings | `SettingsMediumOutline` |
-| 📥 | Inbox | `InboxMediumOutline`, `InboxMediumSolid` |
+| Icon | Name | Example |
+|------|------|---------|
+| 🏠 | House | `<VennorIcons name="house-medium-outline" />` `<VennorIcons name="house-medium-solid" />` |
+| 🔍 | Search | `<VennorIcons name="search-medium-outline" />` `<VennorIcons name="search-medium-solid" />` |
+| ⚙️ | Settings | `<VennorIcons name="settings-medium-outline" />` |
+| 📥 | Inbox | `<VennorIcons name="inbox-medium-outline" />` `<VennorIcons name="inbox-medium-solid" />` |
 
 ### User & People
-| Icon | Name | Variants |
-|------|------|----------|
-| 👤 | Person | `PersonMediumOutline`, `PersonMediumSolid` |
-| 👥 | People | `PeopleMediumOutline`, `PeopleMediumSolid` |
-| ➕ | Person Plus | `PersonPlusMediumOutline` |
-| ➖ | Person Minus | `PersonMinusMediumOutline` |
-| ⭐ | Person Star | `PersonStarMediumOutline` |
+| Icon | Name | Example |
+|------|------|---------|
+| 👤 | Person | `<VennorIcons name="person-medium-outline" />` `<VennorIcons name="person-medium-solid" />` |
+| 👥 | People | `<VennorIcons name="people-medium-outline" />` `<VennorIcons name="people-medium-solid" />` |
+| ➕ | Person Plus | `<VennorIcons name="person-plus-medium-outline" />` |
+| ➖ | Person Minus | `<VennorIcons name="person-minus-medium-outline" />` |
+| ⭐ | Person Star | `<VennorIcons name="person-star-medium-outline" />` |
 
 ### Time & Calendar
-| Icon | Name | Variants |
-|------|------|----------|
-| 📅 | Calendar | `CalenderMediumOutline`, `CalenderMediumSolid` |
-| 🕐 | Clock | `ClockMediumOutline` |
+| Icon | Name | Example |
+|------|------|---------|
+| 📅 | Calendar | `<VennorIcons name="calender-medium-outline" />` `<VennorIcons name="calender-medium-solid" />` |
+| 🕐 | Clock | `<VennorIcons name="clock-medium-outline" />` |
 
 ### Security & Access
-| Icon | Name | Variants |
-|------|------|----------|
-| 🔒 | Lock | `LockMediumSolid` |
-| 🔑 | Key | `KeyMediumOutline` |
-| 📱 | QR Code | `QrcodeMediumOutline` |
+| Icon | Name | Example |
+|------|------|---------|
+| 🔒 | Lock | `<VennorIcons name="lock-medium-solid" />` |
+| 🔑 | Key | `<VennorIcons name="key-medium-outline" />` |
+| 📱 | QR Code | `<VennorIcons name="qrcode-medium-outline" />` |
 
 ### Other
-| Icon | Name | Variants |
-|------|------|----------|
-| 💳 | Wallet | `WalletMediumOutline` |
-| 🎁 | Gift Box | `Giftbox` |
+| Icon | Name | Example |
+|------|------|---------|
+| 💳 | Wallet | `<VennorIcons name="wallet-medium-outline" />` |
+| 🎁 | Gift Box | `<VennorIcons name="giftbox" />` |
 
 ## Icon Naming Convention
 
 Icons follow a consistent naming pattern:
 
 ```
-[Name][Size][Variant]
+[name]-[size]-[variant]
 ```
 
-- **Name**: Descriptive name (e.g., `House`, `Person`, `Search`)
-- **Size**: Currently all icons are `Medium` sized
-- **Variant**: `Outline` or `Solid` (some icons have only one variant)
+- **name**: Descriptive name (e.g., `house`, `person`, `search`)
+- **size**: Currently all icons are `medium` sized
+- **variant**: `outline` or `solid` (some icons have only one variant)
+
+For legacy exports (PascalCase), the pattern is `[Name][Size][Variant]`
 
 ## Styling Icons
 
 ### Changing Size
 
 ```javascript
-<SvgXml xml={HouseMediumOutline} width="32" height="32" />
+<VennorIcons name="house-medium-outline" size={32} />
 ```
 
 ### Changing Color
 
-Most outline icons can be recolored:
+All icons can be recolored by passing the `color` prop:
 
 ```javascript
-<SvgXml xml={PersonMediumOutline} width="24" height="24" fill="#FF5733" />
+<VennorIcons name="person-medium-outline" size={24} color="#FF5733" />
+```
+
+### Dynamic Styling
+
+```javascript
+import { View, StyleSheet } from 'react-native';
+import VennorIcons from '@vennor-technologies/vennor-icons';
+
+function ThemedIcon({ isDarkMode }) {
+  return (
+    <VennorIcons
+      name="search-medium-solid"
+      size={24}
+      color={isDarkMode ? '#FFFFFF' : '#000000'}
+    />
+  );
+}
 ```
 
 ### Adding Custom Styles
 
 ```javascript
 import { View, StyleSheet } from 'react-native';
+import VennorIcons from '@vennor-technologies/vennor-icons';
 
-<View style={styles.iconContainer}>
-  <SvgXml xml={SearchMediumSolid} width="24" height="24" />
-</View>
+function IconButton() {
+  return (
+    <View style={styles.iconContainer}>
+      <VennorIcons name="settings-medium-outline" size={24} color="#4A90E2" />
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
   iconContainer: {
