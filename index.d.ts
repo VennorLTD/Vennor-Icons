@@ -9,7 +9,6 @@ export interface VennorIconsProps extends Omit<SvgProps, 'width' | 'height'> {
 
 export type IconName =
   | 'calender-medium-outline'
-  | 'calender-medium-solid'
   | 'clock-medium-outline'
   | 'giftbox'
   | 'house-medium-outline'
@@ -41,7 +40,6 @@ export interface IconModule {
 }
 
 export const CalenderMediumOutline: IconModule;
-export const CalenderMediumSolid: IconModule;
 export const ClockMediumOutline: IconModule;
 export const Giftbox: IconModule;
 export const HouseMediumOutline: IconModule;
@@ -65,7 +63,6 @@ export const WalletMediumOutline: IconModule;
 
 export const allIcons: {
   CalenderMediumOutline: IconModule;
-  CalenderMediumSolid: IconModule;
   ClockMediumOutline: IconModule;
   Giftbox: IconModule;
   HouseMediumOutline: IconModule;

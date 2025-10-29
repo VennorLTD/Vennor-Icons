@@ -4,7 +4,6 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 const allIcons = [
   'calender-medium-outline',
-  'calender-medium-solid',
   'clock-medium-outline',
   'giftbox',
   'house-medium-outline',

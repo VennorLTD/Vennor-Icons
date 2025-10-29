@@ -1,6 +1,6 @@
 {
   "name": "@vennor-technologies/vennor-icons",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A collection of SVG icons for React Native and Expo applications",
   "main": "index.js",
   "types": "index.d.ts",

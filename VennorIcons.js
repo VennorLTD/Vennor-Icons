@@ -10,10 +10,7 @@ const VennorIcons = ({ name, size = 24, color = '#000000', ...props }) => {
     return null;
   }
 
-  // Process the SVG string to replace stroke/fill colors
-  // Replace stroke colors (but keep stroke-width and stroke-linecap)
   let processedSvg = iconSvg.replace(/stroke="[^"]*"/g, `stroke="${color}"`);
-  // Replace fill colors (but keep fill="none" and fill="white")
   processedSvg = processedSvg.replace(/fill="(?!none|white)[^"]*"/g, `fill="${color}"`);
 
   return (

@@ -3,7 +3,6 @@ import VennorIcons from './VennorIcons';
 // Individual icon exports for backward compatibility
 const icons = {
   CalenderMediumOutline: require('./calender-medium-outline.svg'),
-  CalenderMediumSolid: require('./calender-medium-solid.svg'),
   ClockMediumOutline: require('./clock-medium-outline.svg'),
   Giftbox: require('./giftbox.svg'),
   HouseMediumOutline: require('./house-medium-outline.svg'),

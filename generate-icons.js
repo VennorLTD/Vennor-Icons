@@ -3,7 +3,6 @@ const path = require('path');
 
 const svgFiles = [
   'calender-medium-outline.svg',
-  'calender-medium-solid.svg',
   'clock-medium-outline.svg',
   'giftbox.svg',
   'house-medium-outline.svg',
@@ -31,7 +30,6 @@ let output = '// Auto-generated icon data - SVG strings\nconst iconsData = {\n';
 svgFiles.forEach((file) => {
   const iconName = file.replace('.svg', '');
   const svgContent = fs.readFileSync(path.join(__dirname, file), 'utf-8').trim();
-  // Escape backticks and ${} in SVG content
   const escapedContent = svgContent.replace(/`/g, '\\`').replace(/\$/g, '\\$');
   output += `  '${iconName}': \`${escapedContent}\`,\n`;
 });
