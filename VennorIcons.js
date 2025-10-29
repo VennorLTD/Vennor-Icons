@@ -2,7 +2,7 @@ import { SvgXml } from 'react-native-svg';
 import PropTypes from 'prop-types';
 import iconsData from './icons-data';
 
-const VennorIcons = ({ name, size = 24, color, ...props }) => {
+const VennorIcons = ({ name, size = 24, color = "#000", ...props }) => {
   const iconSvg = iconsData[name];
 
   if (!iconSvg) {
