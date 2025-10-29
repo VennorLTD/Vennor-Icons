@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/vennor-light-icon.svg" alt="Vennor Icons" width="120" height="120">
+  <img src="./assets/vennor-nobg-icon.svg" alt="Vennor Icons" width="120" height="120">
   <h1>Vennor Icons</h1>
   <p>A beautiful, open-source collection of SVG icons for React Native and Expo applications</p>
 
