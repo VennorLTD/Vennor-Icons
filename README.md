@@ -108,7 +108,7 @@ function MyComponent() {
 You can also import individual icon SVG strings directly:
 
 ```javascript
-import { HouseMediumOutline, SearchMediumSolid } from '@vennor-technologies/vennor-icons';
+import { HouseMediumOutline, SearchMediumSolid } from 'vennor-icons';
 import { SvgXml } from 'react-native-svg';
 
 function MyComponent() {
@@ -124,7 +124,7 @@ function MyComponent() {
 ### Import All Icons
 
 ```javascript
-import { allIcons } from '@vennor-technologies/vennor-icons';
+import { allIcons } from 'vennor-icons';
 
 // Access any icon SVG string
 const homeIcon = allIcons.HouseMediumOutline;
@@ -205,7 +205,7 @@ All icons can be recolored by passing the `color` prop:
 
 ```javascript
 import { View, StyleSheet } from 'react-native';
-import VennorIcons from '@vennor-technologies/vennor-icons';
+import VennorIcons from 'vennor-icons';
 
 function ThemedIcon({ isDarkMode }) {
   return (
@@ -222,7 +222,7 @@ function ThemedIcon({ isDarkMode }) {
 
 ```javascript
 import { View, StyleSheet } from 'react-native';
-import VennorIcons from '@vennor-technologies/vennor-icons';
+import VennorIcons from 'vennor-icons';
 
 function IconButton() {
   return (

@@ -1,6 +1,6 @@
 {
   "name": "@vennor-technologies/vennor-icons",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "description": "A collection of SVG icons for React Native and Expo applications",
   "main": "index.js",
   "types": "index.d.ts",
@@ -8,12 +8,15 @@
     "*.svg",
     "index.js",
     "VennorIcons.js",
+    "icons-data.js",
     "index.d.ts",
     "README.md",
     "LICENSE"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-icons": "node generate-icons.js",
+    "prepublishOnly": "npm run generate-icons"
   },
   "keywords": [
     "icons",
