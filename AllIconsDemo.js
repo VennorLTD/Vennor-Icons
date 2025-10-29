@@ -10,7 +10,7 @@ const allIcons = [
   'house-medium-solid',
   'inbox-medium-outline',
   'inbox-medium-solid',
-  'key-medium-outlin',
+  'key-medium-outline',
   'lock-medium-solid',
   'people-medium-outline',
   'people-medium-solid',

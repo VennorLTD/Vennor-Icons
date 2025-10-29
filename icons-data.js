@@ -18,27 +18,6 @@ const iconsData = {
 <rect x="13" y="12" width="1" height="1" rx="0.5" fill="#838383"/>
 <rect x="16" y="12" width="1" height="1" rx="0.5" fill="#838383"/>
 </svg>`,
-  'calender-medium-solid': `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 5.5H18C18.8284 5.5 19.5 6.17157 19.5 7V18C19.5 18.8284 18.8284 19.5 18 19.5H6C5.17157 19.5 4.5 18.8284 4.5 18V7C4.5 6.17157 5.17157 5.5 6 5.5Z" fill="black" stroke="black"/>
-<rect x="7" y="4" width="1" height="4" rx="0.5" fill="black"/>
-<rect x="16" y="4" width="1" height="4" rx="0.5" fill="black"/>
-<mask id="path-4-inside-1_25_211" fill="white">
-<rect x="9" y="9" width="6" height="1" rx="0.4"/>
-</mask>
-<rect x="9" y="9" width="6" height="1" rx="0.4" fill="white" stroke="white" mask="url(#path-4-inside-1_25_211)"/>
-<rect x="7.25" y="12.25" width="0.5" height="0.5" rx="0.25" fill="white" stroke="black" stroke-width="0.5"/>
-<rect x="7.25" y="14.25" width="0.5" height="0.5" rx="0.25" fill="white" stroke="black" stroke-width="0.5"/>
-<rect x="7.25" y="16.25" width="0.5" height="0.5" rx="0.25" fill="white" stroke="black" stroke-width="0.5"/>
-<rect x="10.25" y="14.25" width="0.5" height="0.5" rx="0.25" fill="white" stroke="black" stroke-width="0.5"/>
-<rect x="10.25" y="16.25" width="0.5" height="0.5" rx="0.25" fill="white" stroke="black" stroke-width="0.5"/>
-<rect x="13.25" y="14.25" width="0.5" height="0.5" rx="0.25" fill="white" stroke="black" stroke-width="0.5"/>
-<rect x="13.25" y="16.25" width="0.5" height="0.5" rx="0.25" fill="white" stroke="black" stroke-width="0.5"/>
-<rect x="16.25" y="14.25" width="0.5" height="0.5" rx="0.25" fill="white" stroke="black" stroke-width="0.5"/>
-<rect x="16.25" y="16.25" width="0.5" height="0.5" rx="0.25" fill="white" stroke="black" stroke-width="0.5"/>
-<rect x="10.25" y="12.25" width="0.5" height="0.5" rx="0.25" fill="white" stroke="black" stroke-width="0.5"/>
-<rect x="13.25" y="12.25" width="0.5" height="0.5" rx="0.25" fill="white" stroke="black" stroke-width="0.5"/>
-<rect x="16.25" y="12.25" width="0.5" height="0.5" rx="0.25" fill="white" stroke="black" stroke-width="0.5"/>
-</svg>`,
   'clock-medium-outline': `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12ZM4.7596 12C4.7596 15.9988 8.00124 19.2404 12 19.2404C15.9988 19.2404 19.2404 15.9988 19.2404 12C19.2404 8.00124 15.9988 4.7596 12 4.7596C8.00124 4.7596 4.7596 8.00124 4.7596 12Z" fill="black"/>
 <path d="M12 9V11.973C12 12.1882 12.1377 12.3792 12.3419 12.4473L17 14" stroke="black" stroke-width="0.7" stroke-linecap="round"/>
@@ -120,7 +99,7 @@ const iconsData = {
 <path d="M20 15.3791V5.5C20 5.22386 19.7761 5 19.5 5H11.1765H5.5C5.22386 5 5 5.22386 5 5.5V15.3791C5 15.6553 5.22386 15.8791 5.5 15.8791H10.8467C11.0467 15.8791 11.2275 15.9984 11.3063 16.1823L12.6247 19.261C12.7705 19.6016 13.2231 19.6708 13.4641 19.3894L16.3209 16.0539C16.4159 15.943 16.5546 15.8791 16.7007 15.8791H19.5C19.7761 15.8791 20 15.6553 20 15.3791Z" fill="black" stroke="black" stroke-width="0.8" stroke-linecap="round"/>
 <path d="M9 11L16 11" stroke="white" stroke-width="0.8" stroke-linecap="round"/>
 </svg>`,
-  'key-medium-outlin': `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  'key-medium-outline': `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="8.25928" y="14.4582" width="12.5257" height="1.46783" rx="0.733914" transform="rotate(-45 8.25928 14.4582)" fill="black"/>
 <rect x="16.829" y="7" width="3.12668" height="3.4065" rx="0.5" transform="rotate(45 16.829 7)" fill="black"/>
 <path d="M11 16.5C11 18.433 9.433 20 7.5 20C5.567 20 4 18.433 4 16.5C4 14.567 5.567 13 7.5 13C9.433 13 11 14.567 11 16.5ZM5.70508 16.5C5.70508 17.4913 6.50869 18.2949 7.5 18.2949C8.49131 18.2949 9.29492 17.4913 9.29492 16.5C9.29492 15.5087 8.49131 14.7051 7.5 14.7051C6.50869 14.7051 5.70508 15.5087 5.70508 16.5Z" fill="black"/>

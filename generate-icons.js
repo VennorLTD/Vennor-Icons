@@ -9,7 +9,7 @@ const svgFiles = [
   'house-medium-solid.svg',
   'inbox-medium-outline.svg',
   'inbox-medium-solid.svg',
-  'key-medium-outlin.svg',
+  'key-medium-outline.svg',
   'lock-medium-solid.svg',
   'people-medium-outline.svg',
   'people-medium-solid.svg',

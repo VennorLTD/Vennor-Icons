@@ -1,6 +1,5 @@
 import VennorIcons from './VennorIcons';
 
-// Individual icon exports for backward compatibility
 const icons = {
   CalenderMediumOutline: require('./calender-medium-outline.svg'),
   ClockMediumOutline: require('./clock-medium-outline.svg'),
@@ -9,7 +8,7 @@ const icons = {
   HouseMediumSolid: require('./house-medium-solid.svg'),
   InboxMediumOutline: require('./inbox-medium-outline.svg'),
   InboxMediumSolid: require('./inbox-medium-solid.svg'),
-  KeyMediumOutline: require('./key-medium-outlin.svg'),
+  KeyMediumOutline: require('./key-medium-outline.svg'),
   LockMediumSolid: require('./lock-medium-solid.svg'),
   PeopleMediumOutline: require('./people-medium-outline.svg'),
   PeopleMediumSolid: require('./people-medium-solid.svg'),
@@ -28,9 +27,7 @@ const icons = {
 // Export the main component as default
 export default VennorIcons;
 
-// Named exports for backward compatibility
 export const CalenderMediumOutline = icons.CalenderMediumOutline;
-export const CalenderMediumSolid = icons.CalenderMediumSolid;
 export const ClockMediumOutline = icons.ClockMediumOutline;
 export const Giftbox = icons.Giftbox;
 export const HouseMediumOutline = icons.HouseMediumOutline;

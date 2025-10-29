@@ -155,7 +155,7 @@ All icons are available in the `name` prop using kebab-case format:
 ### Time & Calendar
 | Icon | Name | Example |
 |------|------|---------|
-| 📅 | Calendar | `<VennorIcons name="calender-medium-outline" />` `<VennorIcons name="calender-medium-solid" />` |
+| 📅 | Calendar | `<VennorIcons name="calender-medium-outline" />` |
 | 🕐 | Clock | `<VennorIcons name="clock-medium-outline" />` |
 
 ### Security & Access
